@@ -1,0 +1,49 @@
+{
+  "header": {
+    "home": "Home",
+    "about": "About",
+    "projects": "Projects",
+    "contacts": "Contacts",
+    "en": "English",
+    "ua": "Ukrainian",
+    "ru": "Russian"
+  },
+  
+  "main": {
+    "home": {
+      "title": "Front-end Engineer",
+      "subTitle": "Hi! I'm Serhii Andriievskiy. A passionate Front-end Engineer",
+      "stack": "Tech Stack"
+    },
+    "about": {
+      "title": "about me",
+      "subTitle": "A dedicated Front-end Engineer",
+      "text": "Qualified Web Developer, utilizing a combined set of technologies for the creative development process. I have 1+ years of commercial experience, ranging from simple landing pages to complex business solutions. I would be happy to continue my professional growth and tackle various challenges in a front-end developer role"
+    },
+    "projects": {
+      "title": "projects",
+      "subTitle": "Each project is a unique piece of development",
+      "code": "Code",
+      "demo": "Live Demo",
+      "watop": {
+        "title": "WATOP",
+        "text": "WATOP was developed for the Bulgarian market specializing in cake sales. It focuses on high SEO optimization, user convenience, and security ensured through JWT token-based authentication and the creation of high-quality UI/UX"
+      },
+      "anime": {
+        "title": "AnimeGG",
+        "text": "AnimeGG was developed to ensure convenient and high-quality anime viewing by aggregating data from multiple sources. The system gathers information about various anime, providing users with access to a wide range of content without the need to search across different platforms"
+      },
+      "aat": {
+        "title": "AAT",
+        "text": "AAT was developed to provide a convenient interface for accessing comprehensive metrics information on products sold by sellers on Amazon. The system collects and analyzes data on various metrics, enabling users to obtain comprehensive information without the need to rely on third-party services"
+      }
+    }
+  },
+  "footer": {
+    "title": "contacts",
+    "subTitle": "Don't be shy! Hit me up",
+    "email": "Email",
+    "phone": "Phone",
+    "telegram": "Telegram"
+  }
+}

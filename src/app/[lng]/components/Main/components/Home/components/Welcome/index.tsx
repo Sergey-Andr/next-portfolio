@@ -1,16 +1,19 @@
 import Image from "next/image";
 import hi from "@/../public/hi.png";
-import { StaticImport } from "next/dist/shared/lib/get-img-props";
-import { FaGithub, FaLinkedin } from "react-icons/fa6";
+import face from "@/../public/face.jpg";
+import {
+  StaticImageData,
+  StaticImport,
+} from "next/dist/shared/lib/get-img-props";
 import Link from "next/link";
-import Blob from "@/app/components/Main/components/Home/components/Blob";
+import { FaGithub, FaLinkedin } from "react-icons/fa6";
 
-export default async function Home() {
+export default async function Welcome({ language }) {
   return (
-    <section className="w-3/5 m-auto mt-40">
-      <div className="max-w-1/2">
-        <h2 className="flex text-5xl font-bold items-center mb-2">
-          Front-end Engineer
+    <div className="flex items-center mb-24">
+      <div className="w-3/5 mr-16">
+        <h2 className="flex text-5xl font-bold items-center mb-2 text-nowrap">
+          {language("main.home.title")}
           <Image
             src={hi as StaticImport}
             alt="Image hello"
@@ -18,7 +21,7 @@ export default async function Home() {
           />
         </h2>
         <sub className="text-lg text-black/60 font-medium">
-          Hi! I&apos;m Serhii Andriievskiy. A passionate Front-end Engineer
+          {language("main.home.subTitle")}
         </sub>
         <nav className="flex text-3xl mt-6">
           <Link
@@ -37,9 +40,13 @@ export default async function Home() {
           </Link>
         </nav>
       </div>
-      <div className="w-1/2 bg-black">
-        <Blob />
+      <div className="w-2/5">
+        <Image
+          src={face as StaticImageData}
+          alt={"face"}
+          className="animate-blob border-2 border-black"
+        />
       </div>
-    </section>
+    </div>
   );
 }
