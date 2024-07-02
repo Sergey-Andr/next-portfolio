@@ -1,4 +1,4 @@
-import { createInstance } from "i18next";
+import i18next, { createInstance } from "i18next";
 import resourcesToBackend from "i18next-resources-to-backend";
 import { initReactI18next } from "react-i18next/initReactI18next";
 import { defaultNS, getOptions } from "./settings";
@@ -17,7 +17,16 @@ const initI18next = async (lng, ns) => {
   return i18nInstance;
 };
 
-export async function useTranslation(lng, ns = defaultNS, options = {}) {
+export type TFunction = (key: string, options?: object) => string;
+
+export async function useTranslation(
+  lng,
+  ns = defaultNS,
+  options = {},
+): Promise<{
+  t: TFunction;
+  i18n: i18next.i18n;
+}> {
   const i18nextInstance = await initI18next(lng, ns);
   return {
     t: i18nextInstance.getFixedT(

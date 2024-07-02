@@ -1,6 +1,7 @@
 import Image from "next/image";
+import { TFunction } from "@/app/i18n";
 
-export default async function TechStack({ language }) {
+export default async function TechStack({ language }: { language: TFunction }) {
   return (
     <div className="flex items-center">
       <h3 className="text-xl font-bold mr-8 text-nowrap">

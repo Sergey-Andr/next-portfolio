@@ -7,8 +7,9 @@ import {
 } from "next/dist/shared/lib/get-img-props";
 import Link from "next/link";
 import { FaGithub, FaLinkedin } from "react-icons/fa6";
+import { TFunction } from "@/app/i18n";
 
-export default async function Welcome({ language }) {
+export default async function Welcome({ language }: { language: TFunction }) {
   return (
     <div className="flex items-center mb-24">
       <div className="w-3/5 mr-16">

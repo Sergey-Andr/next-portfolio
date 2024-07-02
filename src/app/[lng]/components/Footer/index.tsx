@@ -4,8 +4,9 @@ import phone from "@/../public/phone.png";
 import telegram from "@/../public/telegram.png";
 import { StaticImageData } from "next/dist/shared/lib/get-img-props";
 import Link from "next/link";
+import { TFunction } from "@/app/i18n";
 
-export default async function Footer({ language }) {
+export default async function Footer({ language }: { language: TFunction }) {
   return (
     <footer id="contacts" className="mb-16">
       <h2 className="text-2xl uppercase text-sky-400 font-medium">

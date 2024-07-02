@@ -7,7 +7,7 @@ export default async function Page({ params: { lng } }) {
   const { t } = await useTranslation(lng);
   return (
     <>
-      <Header language={t} lng={lng} />
+      <Header language={t} />
       <Main language={t} />
       <Footer language={t} />
     </>

@@ -2,8 +2,9 @@ import Image from "next/image";
 import cirle from "@/../public/circle.svg";
 import programmer from "@/../public/programmer.png";
 import { StaticImport } from "next/dist/shared/lib/get-img-props";
+import { TFunction } from "@/app/i18n";
 
-export default async function About({ language }) {
+export default async function About({ language }: { language: TFunction }) {
   return (
     <section className="mb-96 flex">
       <aside className="relative w-fit mr-16">

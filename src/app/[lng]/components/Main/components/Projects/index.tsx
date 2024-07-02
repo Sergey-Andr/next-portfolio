@@ -3,8 +3,9 @@ import { StaticImport } from "next/dist/shared/lib/get-img-props";
 import Link from "next/link";
 import { FaGithub, FaLink } from "react-icons/fa6";
 import { projects } from "./config";
+import { TFunction } from "@/app/i18n";
 
-export default async function Projects({ language }) {
+export default async function Projects({ language }: { language: TFunction }) {
   return (
     <section className="mb-96">
       <h2 id="projects" className="text-2xl uppercase text-sky-400 font-medium">

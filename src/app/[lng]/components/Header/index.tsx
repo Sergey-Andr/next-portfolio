@@ -1,4 +1,6 @@
-export default async function Header({ language, lng }) {
+import { TFunction } from "@/app/i18n";
+
+export default async function Header({ language }: { language: TFunction }) {
   return (
     <header className="w-full h-16 flex justify-between sticky top-4">
       <h1 className="text-xl font-bold mr-8">Serhii.dev</h1>
