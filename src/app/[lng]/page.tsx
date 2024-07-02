@@ -3,7 +3,11 @@ import Header from "@/app/[lng]/components/Header";
 import Footer from "@/app/[lng]/components/Footer";
 import { useTranslation } from "@/app/i18n";
 
-export default async function Page({ params: { lng } }) {
+export default async function Page({
+  params: { lng },
+}: {
+  params: { lng: string };
+}) {
   const { t } = await useTranslation(lng);
   return (
     <>
