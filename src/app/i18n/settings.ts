@@ -5,7 +5,6 @@ export const cookieName = "language";
 
 export function getOptions(lng = fallbackLng, ns = defaultNS) {
   return {
-    // debug: true,
     supportedLngs: languages,
     fallbackLng,
     lng,

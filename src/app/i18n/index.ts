@@ -20,7 +20,7 @@ const initI18next = async (lng: string, ns: string) => {
 export type TFunction = (key: string, options?: object) => string;
 
 export async function useTranslation(
-  lng,
+  lng: string,
   ns = defaultNS,
   options = {},
 ): Promise<{
@@ -32,7 +32,7 @@ export async function useTranslation(
     t: i18nextInstance.getFixedT(
       lng,
       Array.isArray(ns) ? ns[0] : ns,
-      options.keyPrefix,
+      (options as any).keyPrefix,
     ),
     i18n: i18nextInstance,
   };
