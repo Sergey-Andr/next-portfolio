@@ -1,7 +1,7 @@
 "use client";
 import { memo, ReactElement, useEffect, useState } from "react";
 import { usePathname } from "next/navigation";
-import { FaHouse, FaPhone, FaUser } from "react-icons/fa6";
+import { FaAngleRight, FaHouse, FaPhone, FaUser } from "react-icons/fa6";
 import { SiCurseforge } from "react-icons/si";
 
 const lng = {
@@ -54,6 +54,14 @@ const HeaderMobile = (): ReactElement => {
   const height = document.body.scrollHeight;
   return (
     <header>
+      <span
+        onClick={() => {
+          setIsOpen(true);
+        }}
+        className="absolute top-0 left-0 bg-sky-400/60 w-8 h-8 rounded-full -translate-x-1/2"
+      >
+        <FaAngleRight className="fill-black relative translate-x-full translate-y-1/2" />
+      </span>
       <span
         onClick={() => {
           setIsOpen(false);
