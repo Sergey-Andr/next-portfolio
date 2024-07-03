@@ -1,22 +1,67 @@
 import Image from "next/image";
 import { TFunction } from "@/app/i18n";
+import html from "@/../public/html.png";
+import css from "@/../public/css.png";
+import js from "@/../public/js.png";
+import ts from "@/../public/ts.png";
+import react from "@/../public/react.png";
+import next from "@/../public/next.png";
+import tailwind from "@/../public/tailwind.png";
+import mui from "@/../public/mui.png";
+import { StaticImageData } from "next/dist/shared/lib/get-img-props";
 
 export default async function TechStack({ language }: { language: TFunction }) {
   return (
     <div className="flex items-center">
-      <h3 className="text-xl font-bold mr-8 text-nowrap">
+      <h3 className="text-xl quad:text-2xl lg:text-lg max-sm:text-sm font-bold mr-8 max-sm:mr-2 text-nowrap">
         {language("main.home.stack")}&nbsp;&nbsp;
         <span className="relative -top-0.5">|</span>
       </h3>
-      <div className="flex grid-rows-1 gap-8 w-full">
-        <Image width="38" height="26" src={"/html.png"} alt="html" />
-        <Image width="28" height="26" src={"/css.png"} alt="css" />
-        <Image width="32" height="20" src={"/js.png"} alt="js" />
-        <Image width="32" height="20" src={"/ts.png"} alt="ts" />
-        <Image width="38" height="20" src={"/react.png"} alt="react" />
-        <Image width="28" height="16" src={"/next.png"} alt="nextJs" />
-        <Image width="38" height="26" src={"/tailwind.png"} alt="tailwindCSS" />
-        <Image width="28" height="16" src={"/mui.png"} alt="Material UI" />
+      <div className="flex grid-rows-1 gap-8 quad:gap-12 lg:gap-6 max-sm:gap-4 w-full">
+        <Image
+          src={html as StaticImageData}
+          alt="html"
+          className="w-9 quad:w-12 lg:w-7 max-sm:w-5"
+        />
+        <Image
+          width="28"
+          height="26"
+          src={css as StaticImageData}
+          alt="css"
+          className="w-7 quad:w-9 lg:w-5 max-sm:w-4"
+        />
+        <Image
+          src={js as StaticImageData}
+          alt="js"
+          className="w-8 quad:w-9 lg:w-6 max-sm:w-5"
+        />
+        <Image
+          src={ts as StaticImageData}
+          alt="ts"
+          className="w-8 quad:w-9 lg:w-6 max-sm:w-5"
+        />
+        <Image
+          width="38"
+          height="20"
+          src={react as StaticImageData}
+          alt="react"
+          className="w-9 quad:w-10 lg:w-7 max-sm:w-5"
+        />
+        <Image
+          src={next as StaticImageData}
+          alt="nextJs"
+          className="w-7 quad:w-9 lg:w-5 max-sm:w-4"
+        />
+        <Image
+          src={tailwind as StaticImageData}
+          alt="tailwindCSS"
+          className="w-9 quad:w-10 lg:w-8 max-sm:w-5"
+        />
+        <Image
+          src={mui as StaticImageData}
+          alt="Material UI"
+          className="w-7 quad:w-9 lg:w-5 max-sm:w-4"
+        />
       </div>
     </div>
   );

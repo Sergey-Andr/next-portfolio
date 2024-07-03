@@ -20,8 +20,14 @@ export default function RootLayout({
   params: { lng: string };
 }>) {
   return (
-    <html lang={lng} dir={dir(lng)} className="scroll-smooth">
-      <body className="w-4/5 m-auto min-h-dvh h-full bg-white font-sans ">
+    <html lang={lng} dir={dir(lng)} className="scroll-smooth overflow-x-hidden">
+      <head>
+        <meta charSet="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link href={`/logo.png`} rel="icon" type="image/svg+xml" />
+        <title>Portfolio</title>
+      </head>
+      <body className="w-4/5 max-sm:w-11/12 m-auto min-h-dvh h-full bg-white font-sans">
         {children}
       </body>
     </html>

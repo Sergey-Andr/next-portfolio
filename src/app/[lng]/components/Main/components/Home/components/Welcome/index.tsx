@@ -11,20 +11,20 @@ import { TFunction } from "@/app/i18n";
 
 export default async function Welcome({ language }: { language: TFunction }) {
   return (
-    <div className="flex items-center mb-24">
+    <div className="flex items-center max-sm:items-start mb-24 max-sm:mb-12">
       <div className="w-3/5 mr-16">
-        <h2 className="flex text-5xl font-bold items-center mb-2 text-nowrap">
+        <h2 className="flex text-5xl quad:text-7xl lg:text-3xl max-sm:text-2xl font-bold items-center mb-2 lg:mb-0 text-nowrap">
           {language("main.home.title")}
           <Image
             src={hi as StaticImport}
             alt="Image hello"
-            className="w-10 h-10 ml-4"
+            className="w-10 h-10 ml-4 quad:w-16 quad:h-16 lg:w-8 lg:h-8 max-sm:w-6 max-sm:h-6"
           />
         </h2>
-        <sub className="text-lg text-black/60 font-medium">
+        <sub className="text-lg quad:text-2xl lg:text-sm max-sm:text-sm text-black/60 font-medium">
           {language("main.home.subTitle")}
         </sub>
-        <nav className="flex text-3xl mt-6">
+        <nav className="flex text-3xl quad:text-4xl lg:text-2xl mt-6 quad:mt-8 max-sm:text-xl">
           <Link
             href="https://www.linkedin.com/in/serhii-andr/"
             target="_blank"

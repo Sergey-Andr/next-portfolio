@@ -5,7 +5,7 @@ import { TFunction } from "@/app/i18n";
 
 export default async function Main({ language }: { language: TFunction }) {
   return (
-    <main className="h-full w-3/5 m-auto">
+    <main className="h-full w-3/5 lg:w-4/5 max-sm:w-full m-auto">
       <Home language={language} />
       <About language={language} />
       <Projects language={language} />

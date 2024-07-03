@@ -11,6 +11,9 @@ const config: any = {
         "gradient-conic":
           "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
       },
+      screens: {
+        quad: "2560px",
+      },
       keyframes: {
         blob: {
           "0%": {
@@ -35,7 +38,7 @@ const config: any = {
         },
       },
       animation: {
-        blob: "blob 7s linear infinite",
+        blob: "blob 5s linear infinite",
         "circle-text": "circle-text 3s linear infinite",
       },
     },
