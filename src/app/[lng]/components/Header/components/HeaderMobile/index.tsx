@@ -53,7 +53,7 @@ const HeaderMobile = (): ReactElement => {
 
   const height = document.body.scrollHeight;
   return (
-    <header>
+    <header className="sm:hidden">
       <span
         onClick={() => {
           setIsOpen(true);
